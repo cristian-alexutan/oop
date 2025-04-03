@@ -42,6 +42,7 @@ void Ui::add_car() {
     bool ans = this->service.add_car(temp);
     if(!ans)
         std::cout << "car was not added, identical model exists\n";
+    std::cout << "car was added successfully\n";
 }
 
 void Ui::remove_car() {
