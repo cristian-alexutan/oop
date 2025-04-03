@@ -18,6 +18,8 @@ void Ui::get_all_cars() {
     std::vector<Car> cars = this->service.get_all_cars();
     for(int i=0; i<cars.size(); i++)
         std::cout << i << ": " << cars[i].to_string() << "\n";
+    if(cars.empty())
+        std::cout << "there are no cars\n";
     std::cout << "\n";
 }
 
@@ -68,6 +70,8 @@ void Ui::get_vintage_cars() {
     std::vector<Car> cars = this->service.get_vintage_cars();
     for(int i=0; i<cars.size(); i++)
         std::cout << i << ": " << cars[i].to_string() << "\n";
+    if(cars.empty())
+        std::cout << "there are no vintage cars\n";
     std::cout << "\n";
 }
 
